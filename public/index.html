@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Drive-In</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulmaStyles.css">
+    <link rel="stylesheet" href="modal.css">
+    
+    <!-- SCRIPTS -->
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <nav class="navbar has-centered-menu is-fixed-top" role="navigation" aria-label="Main Navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item"  href="/" >
+            <img src="/logo/logo.svg" width="112" height="28" alt="Twilight Logo">
+          </a>
+      
+          <label for="toggler" class="navbar-burger burger" >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </label>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/"> <strong>Home</strong>  </a>
+                <a class="navbar-item" href="/"> <strong>Movies</strong> </a>
+                <a class="navbar-item" href="/"> <strong>Upcoming</strong> </a>
+                <a class="navbar-item" href="/"> <strong>Admissions</strong> </a>
+                <a class="navbar-item" href="/"> <strong>Directions</strong> </a>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <span class="icon is-large">
+                <a href="/">
+                  <i class="fas fa-lg fa-shopping-cart"></i>
+                </a>
+              </span>
+              <span class="icon is-large">
+                <a href="/">
+                  <i class="far fa-lg fa-user-circle"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero is-halfheight">
+        <div class="hero-body" id="hero-poster-container">
+          <div  class="play-trailer">
+            <ion-icon id="play-button" title="trailer"src="/svg/misc/play-circle-outline.svg"></ion-icon>
+          </div>
+          <div class="modal modal-fx-fadeInScale">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <figure class="image is-16by9">
+                <iframe id="yt-player" class="has-ratio yt-player-iframe" 
+                        allowfullscreen="1" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
+                        src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=1&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                        width="100%" height="100%" 
+                        frameborder="0">
+                </iframe>
+              </figure>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <section class="hero is-info is-fullheight">
+        <div class="hero-body">
+        </div>
+      </section>
+    </main>
+  </div>
+    <footer class="footer">
+      
+      <div class="copyright">
+        <p> © 2021 Twilight Drive-In</p>
+      </div>
+
+      <div class="social-media">
+        <span class="icon is-large">
+          <a href="/">
+            <i class="fab fa-lg fa-facebook"></i>
+          </a>
+        </span>
+        <span class="icon is-large">
+          <a href="/">
+            <i class="fab fa-lg fa-instagram"></i>
+          </a>
+        </span>
+        <span class="icon is-large">
+          <a href="/">
+            <i class="fab fa-lg fa-linkedin"></i>
+          </a>
+        </span>
+      </div>
+      
+    
+      
+    </footer>
+  
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+html, 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Centering NavBar Menu Items */
+.navbar.has-centered-menu .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Set Hero Image */
+#hero-poster-container {
+    
+    background-image: 
+        linear-gradient(to bottom, rgba(245, 246, 252, 0.32), rgba(117, 19, 93, 0.53)),
+        url("/movies/hero/croods2-6000x4284_compressed.jpg");
+
+    /* Center & Scale Properly */
+    height: 100vh; 
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+
+/* Set Play Button */
+#hero-poster-container {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Play Button Settings */
+ion-icon {
+    color: white;
+    opacity: 0.85;
+    height: 8rem;
+    width: 8rem;
+
+    transition: all 0.25s ease-in-out;
+}
+
+ion-icon:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Make Footer Sticky */
+#wrapper {
+    flex: 1;
+}
