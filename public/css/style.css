@@ -1,6 +1,6 @@
 html, 
 body {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -20,24 +20,36 @@ body {
         url("/movies/hero/croods2-6000x4284_compressed.jpg");
 
     /* Center & Scale Properly */
-    height: 100vh; 
+    /* min-height: 96.05vh;  */
+    object-fit: contain;
     color: white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
 }
 
-/* Set Play Button */
+
+/* Center Trailer Play Button */
 #hero-poster-container {
     display: flex;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     justify-content: center;
     align-items: center;
+    position: relative;  
 }
 
+/* Right Bottom Align Movie Tags */
+.movie-tags {
+    position: absolute;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    bottom: 0;
+    right: 0;
+}
 
-
-/* Play Button Settings */
+/* Play Button Transitions */
 ion-icon {
     color: white;
     opacity: 0.85;
@@ -53,8 +65,7 @@ ion-icon:hover {
     transform: scale(1.08);
 }
 
-
-
+/* Space Footer Content to Ends */
 .footer {
     display: flex;
     flex-direction: row;
