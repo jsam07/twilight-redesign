@@ -73,13 +73,15 @@
           <div  class="play-trailer">
             <ion-icon id="play-button" title="trailer"src="/svg/misc/play-circle-outline.svg"></ion-icon>
           </div>
+          
           <div class="modal modal-fx-fadeInScale">
             <div class="modal-background"></div>
             <div class="modal-content">
               <figure class="image is-16by9">
                 <iframe id="yt-player" class="has-ratio yt-player-iframe" 
                         allowfullscreen="1" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        sandbox="allow-scripts allow-same-origin" 
                         src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=1&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                         width="100%" height="100%" 
                         frameborder="0">
@@ -90,10 +92,11 @@
           </div>
           <div class="movie-tags">
             <div class="tags">
-              <span class="tag is-link is-light">Family</span>
-              <span class="tag is-link is-light">Comedy</span>
-              <span class="tag is-link is-light">2020</span>
-              <span class="tag is-link is-light">1h 35m</span>
+              <span class="tag is-link is-light movie-rating">PG-13</span>
+              <span class="tag is-link is-light movie-type">Family</span>
+              <span class="tag is-link is-light movie-genre">Comedy</span>
+              <span class="tag is-link is-light movie-year">2020</span>
+              <span class="tag is-link is-light movie-duration">1h 35m</span>
             </div>
           </div>
         </div>
