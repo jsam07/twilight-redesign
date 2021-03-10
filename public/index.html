@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulmaStyles.css">
     <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="style.css">
     
     <!-- SCRIPTS -->
 
@@ -28,7 +28,7 @@
 <body>
   <div id="wrapper">
     <header>
-      <nav class="navbar has-centered-menu is-fixed-top" role="navigation" aria-label="Main Navigation">
+      <nav class="navbar has-centered-menu" role="navigation" aria-label="Main Navigation">
         <div class="navbar-brand">
           <a class="navbar-item"  href="/" >
             <img src="/logo/logo.svg" width="112" height="28" alt="Twilight Logo">
@@ -67,9 +67,8 @@
         </div>
       </nav>
     </header>
-    
     <main>
-      <section class="hero is-halfheight">
+      <section class="hero is-halfheight" id="hero-poster">
         <div class="hero-body" id="hero-poster-container">
           <div  class="play-trailer">
             <ion-icon id="play-button" title="trailer"src="/svg/misc/play-circle-outline.svg"></ion-icon>
@@ -88,6 +87,14 @@
               </figure>
             </div>
             <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+          <div class="movie-tags">
+            <div class="tags">
+              <span class="tag is-link is-light">Family</span>
+              <span class="tag is-link is-light">Comedy</span>
+              <span class="tag is-link is-light">2020</span>
+              <span class="tag is-link is-light">1h 35m</span>
+            </div>
           </div>
         </div>
       </section>
