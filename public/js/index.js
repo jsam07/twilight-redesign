@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
     // Dynamically Set Hero Section Height
     function setHeroSectionHeight() {
         const viewportHeight = $(window).height();

@@ -20,6 +20,7 @@
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="movie-carousel.js"></script>
 
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
@@ -91,7 +92,7 @@
             <button class="modal-close is-large" aria-label="close"></button>
           </div>
           <div class="movie-tags">
-            <div class="tags">
+            <div id="tags">
               <span class="tag is-link is-light movie-rating">PG-13</span>
               <span class="tag is-link is-light movie-type">Family</span>
               <span class="tag is-link is-light movie-genre">Comedy</span>
@@ -99,6 +100,23 @@
               <span class="tag is-link is-light movie-duration">1h 35m</span>
             </div>
           </div>
+          <div class="movie-name">
+            <div class="main-movie-title" >
+              <span id="movie-title">The Croods 2</span>
+            </div>
+            <div class="sub-movie-title">
+              <span id="movie-subtitle">A New Age</span>
+            </div>
+            <div class="buy-ticket">
+              <button class="button is-medium buy-ticket-btn">
+                <span class="icon">
+                  <i class="fas fa-play"></i>
+                </span>
+                <span>BUY TICKETS</span>
+              </button>
+            </div>
+          </div>
+          
         </div>
       </section>
       
