@@ -16,7 +16,6 @@ body {
 #hero-poster-container {
     
     background-image: 
-        /* linear-gradient(to bottom, rgba(245, 246, 252, 0.32), rgba(117, 19, 93, 0.53)), */
         linear-gradient(to bottom, rgba(245, 246, 252, 0.32), rgba(27, 27, 27, 0.73)),
         url("/movies/hero/croods2-6000x4284_compressed.jpg");
 
@@ -26,6 +25,27 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
+/* 
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; */
+}
+
+#prev-movie,
+#next-movie {
+    height:4rem;
+    width: 4rem;
+}
+
+#prev-hero-movie {
+    position: absolute;
+    left: 0;
+}
+
+#next-hero-movie {
+    position: absolute;
+    right: 0;
 }
 
 
@@ -55,7 +75,7 @@ body {
 
 .movie-name {
     position: absolute;
-    padding:    0rem 0rem 12rem 2rem;
+    padding: 2rem 0rem 8rem 2rem;
     bottom: 0;
     left: 0;
 }

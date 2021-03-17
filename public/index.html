@@ -72,7 +72,15 @@
       <section class="hero is-halfheight" id="hero-poster">
         <div class="hero-body" id="hero-poster-container">
           <div  class="play-trailer">
-            <ion-icon id="play-button" title="trailer"src="/svg/misc/play-circle-outline.svg"></ion-icon>
+            <ion-icon id="play-button" title="trailer" src="/svg/misc/play-circle-outline.svg"></ion-icon>
+          </div>
+
+          <div id="prev-hero-movie">
+            <ion-icon id="prev-movie" name="chevron-back-outline"></ion-icon>
+          </div>
+
+          <div id="next-hero-movie">
+            <ion-icon id="next-movie" name="chevron-forward-outline"></ion-icon>
           </div>
           
           <div class="modal modal-fx-fadeInScale">
@@ -83,7 +91,7 @@
                         allowfullscreen="1" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         sandbox="allow-scripts allow-same-origin" 
-                        src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=1&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                        src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                         width="100%" height="100%" 
                         frameborder="0">
                 </iframe>
@@ -104,7 +112,7 @@
             <div class="main-movie-title" >
               <span id="movie-title">The Croods 2</span>
             </div>
-            <div class="sub-movie-title">
+            <div class="sub-movie-title" id="movie-subtitle-container">
               <span id="movie-subtitle">A New Age</span>
             </div>
             <div class="buy-ticket">
