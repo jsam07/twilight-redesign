@@ -71,7 +71,7 @@ body {
 
 .movie-name {
     position: absolute;
-    padding: 2rem 0rem 8rem 2rem;
+    padding: 2rem 0rem 2rem 2rem;
     bottom: 0;
     left: 0;
 }
@@ -98,7 +98,7 @@ body {
     transition: all 0.25s ease-in-out;
 }
 
-.buy-ticket-btn:hover{
+.buy-ticket-btn:hover {
     cursor: pointer;
     background-color: white;
     color: #f61434;  
@@ -150,7 +150,7 @@ ion-icon:hover {
     padding-bottom: 0.8rem;
 }
 
-img {
+figure img {
     object-fit: cover;
     width: 100%;
 }
@@ -176,6 +176,12 @@ img {
         font-size: 1.5rem; 
     }
 
+}
+
+@media only screen and (max-height: 600px) {
+    .movie-details {
+        display: none;
+    }
 }
 
 
