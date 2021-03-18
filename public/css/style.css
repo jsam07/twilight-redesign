@@ -25,11 +25,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
-/* 
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; */
+
 }
 
 #prev-movie,
@@ -110,7 +106,6 @@ body {
 
 /* Play Button Transitions */
 ion-icon {
-    color: white;
     opacity: 0.85;
     height: 8rem;
     width: 8rem;
@@ -123,6 +118,7 @@ ion-icon:hover {
     opacity: 1;
     transform: scale(1.08);
 }
+
 
 /* Space Footer Content to Ends */
 .footer {
@@ -137,9 +133,30 @@ ion-icon:hover {
     flex: 1;
 }
 
+.tile {
+    padding: 2rem;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+
+.media-content {
+    padding-bottom: 0.8rem;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
 
 @media only screen and (max-width: 750px) {
-    #tags {
+    #hero-tags {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -159,4 +176,31 @@ ion-icon:hover {
         font-size: 1.5rem; 
     }
 
+}
+
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 0.8rem;
+    text-align: center;
+
+    transition: all 0.35s ease-in-out;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.card-image:hover .overlay {
+    opacity: 1;
+}
+
+.movie-image .after{
+    background: red;
 }

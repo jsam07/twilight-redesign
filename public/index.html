@@ -21,6 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <script src="movie-carousel.js"></script>
+    <script src="movie-trailer-modals.js"></script>
 
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
@@ -41,7 +42,6 @@
             <span aria-hidden="true"></span>
           </label>
         </div>
-      
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item" href="/"> <strong>Home</strong>  </a>
@@ -50,7 +50,6 @@
                 <a class="navbar-item" href="/"> <strong>Admissions</strong> </a>
                 <a class="navbar-item" href="/"> <strong>Directions</strong> </a>
           </div>
-      
           <div class="navbar-end">
             <div class="navbar-item">
               <span class="icon is-large">
@@ -83,24 +82,27 @@
             <ion-icon id="next-movie" name="chevron-forward-outline"></ion-icon>
           </div>
           
-          <div class="modal modal-fx-fadeInScale">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <figure class="image is-16by9">
-                <iframe id="yt-player" class="has-ratio yt-player-iframe" 
-                        allowfullscreen="1" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        sandbox="allow-scripts allow-same-origin" 
-                        src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
-                        width="100%" height="100%" 
-                        frameborder="0">
-                </iframe>
-              </figure>
+          <div class="movie-actions-container" >
+            <div class="modal-container" id="hero-movie-modal-container">
+              <div class="modal modal-fx-fadeInScale">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                  <figure class="image is-16by9">
+                    <iframe class="has-ratio yt-player-iframe" 
+                            allowfullscreen="1" 
+                            sandbox="allow-scripts allow-same-origin" 
+                            src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                            width="100%" height="100%" 
+                            frameborder="0">
+                    </iframe>
+                  </figure>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+              </div>
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
           </div>
           <div class="movie-tags">
-            <div id="tags">
+            <div id="hero-tags">
               <span class="tag is-link is-light movie-rating">PG-13</span>
               <span class="tag is-link is-light movie-type">Family</span>
               <span class="tag is-link is-light movie-genre">Comedy</span>
@@ -118,20 +120,353 @@
             <div class="buy-ticket">
               <button class="button is-medium buy-ticket-btn">
                 <span class="icon">
-                  <i class="fas fa-play"></i>
+                  <ion-icon id="buy-ticket-icon" name="ticket-outline"></ion-icon>
                 </span>
                 <span>BUY TICKETS</span>
               </button>
             </div>
           </div>
-          
         </div>
       </section>
-      
-
-
-      <section class="hero is-info is-fullheight">
-        <div class="hero-body">
+    
+      <section class="hero">
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/croods2-6000x4284_compressed.jpg" alt="The Croods 2">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">The Croods 2: A New Age</p>
+                </div>
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">PG-13</span>
+                    <span class="tag is-link is-light movie-type">Family</span>
+                    <span class="tag is-link is-light movie-genre">Comedy</span>
+                    <span class="tag is-link is-light movie-year">2020</span>
+                    <span class="tag is-link is-light movie-duration">1h 35m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/ww84-3840x2160.jpg" alt="Wonder Woman 1984">
+                </figure>
+              </div>
+              
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">Wonder Woman 1984</p>
+                </div>
+            
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">PG-13</span>
+                    <span class="tag is-link is-light movie-type">Fantasy</span>
+                    <span class="tag is-link is-light movie-genre">Adventure</span>
+                    <span class="tag is-link is-light movie-year">2020</span>
+                    <span class="tag is-link is-light movie-duration">2h 31m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/sfM7_JLk-84?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/raya-and-the-last-dragon-3840x2160.jpg" alt="Raya And The Last Dragon">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">Raya And The Last Dragon</p>
+                </div>
+            
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">PG-13</span>
+                    <span class="tag is-link is-light movie-type">Fantasy</span>
+                    <span class="tag is-link is-light movie-year">2021</span>
+                    <span class="tag is-link is-light movie-duration">1h 57m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/1VIZ89FEjYI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/the-little-things-movie-poster_3840x2160.jpg" alt="The Little Things">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">The Little Things</p>
+                </div>
+            
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">R</span>
+                    <span class="tag is-link is-light movie-type">Crime</span>
+                    <span class="tag is-link is-light movie-type">Thriller </span>
+                    <span class="tag is-link is-light movie-year">2021</span>
+                    <span class="tag is-link is-light movie-duration">2h 8m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/1HZAnkxdYuA?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/soul-3840x2160.jpg" alt="Soul">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">Soul</p>
+                </div>
+            
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">PG-13</span>
+                    <span class="tag is-link is-light movie-type">Family</span>
+                    <span class="tag is-link is-light movie-type">Comedy  </span>
+                    <span class="tag is-link is-light movie-year">2021</span>
+                    <span class="tag is-link is-light movie-duration">1h 47m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/xOsLIiBStEs?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img class="movie-image" src="/movies/hero/ma_raineys-3840x2160.jpg" alt="Ma Rainey Black Bottom">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4">Ma Rainey Black Bottom</p>
+                </div>
+            
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-link is-light movie-rating">R</span>
+                    <span class="tag is-link is-light movie-type">Drama</span>
+                    <span class="tag is-link is-light movie-type">Music</span>
+                    <span class="tag is-link is-light movie-year">2020</span>
+                    <span class="tag is-link is-light movie-duration">1h 34m</span>
+                  </div>
+                </div>
+                <div class="movie-actions-container">
+                  <div class="buttons">
+                    <button class="button is-info watch-movie-trailer">
+                      <span class="icon">
+                        <i class="fas fa-play"></i>
+                      </span>
+                      <span>WATCH TRAILER</span>
+                    </button>
+                    <button class="button is-primary buy-ticket-btn">
+                      <span class="icon">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                      </span>
+                      <span>BUY TICKETS</span>
+                    </button>
+                  </div>
+                  <div class="modal-container">
+                    <div class="modal modal-fx-fadeInScale">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <figure class="image is-16by9">
+                          <iframe class="has-ratio yt-player-iframe" 
+                                  allowfullscreen="1" 
+                                  sandbox="allow-scripts allow-same-origin" 
+                                  src="https://www.youtube.com/embed/ord7gP151vk?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
+                                  width="100%" height="100%" 
+                                  frameborder="0">
+                          </iframe>
+                        </figure>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
