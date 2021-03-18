@@ -1,6 +1,7 @@
 const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 /**
  * CONSTANTS
@@ -8,9 +9,10 @@ const express = require('express');
 const PORT = process.env.PORT || 8080;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const JS_DIR = path.join(__dirname, 'public', 'js');
+const STYLES_DIR = path.join(__dirname, 'public', 'css');
 const PAGES_DIR = path.join(__dirname, 'public', 'pages');
 const IMAGES_DIR = path.join(__dirname, 'public', 'images');
-const STYLES_DIR = path.join(__dirname, 'public', 'css');
+const ERROR_404 = path.join(__dirname, 'public', 'pages', '404.html');
 
 /**
  * START EXPRESS
@@ -37,6 +39,9 @@ app.use(express.static(PAGES_DIR));
 app.use(express.static(PUBLIC_DIR));
 app.use(express.static(IMAGES_DIR));
 app.use(express.static(STYLES_DIR));
+app.get('*', (req, res) => {
+    res.sendFile(ERROR_404);
+});
 
 /**
  * START SERVER
