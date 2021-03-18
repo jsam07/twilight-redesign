@@ -46,7 +46,7 @@ const movies = [
 ];
 
 function setMovieTags(tags) {
-    const tagsContainer = $('#tags');
+    const tagsContainer = $('#hero-tags');
     tagsContainer.empty();
 
     tags.forEach((tag) => {
