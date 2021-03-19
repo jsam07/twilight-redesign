@@ -42,7 +42,6 @@ $(() => {
 
     $('#play-button').on('click', () => {
         const modalContainer = $('#hero-movie-modal-container');
-        console.log(modalContainer);
         openModal(modalContainer);
     });
 
@@ -52,5 +51,16 @@ $(() => {
 
     $('.modal-background').on('click', () => {
         enableScrollingCloseModalAndStopVideo();
+    });
+
+    $('#directions').on('click', function () {
+        const navbarContainer = $(this).parent();
+        const modalContainer = navbarContainer.next();
+        openModal(modalContainer);
+    });
+
+    $('#admissions').on('click', () => {
+        const modalContainer = $('#admissions-container');
+        openModal(modalContainer);
     });
 });
