@@ -1,17 +1,18 @@
 const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
+const session = require('express-session');
 
 /**
  * CONSTANTS
  */
 const PORT = process.env.PORT || 8080;
+const MAX_COOKIE_AGE = 24 * 60 * 60 * 1000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const JS_DIR = path.join(__dirname, 'public', 'js');
 const STYLES_DIR = path.join(__dirname, 'public', 'css');
 const PAGES_DIR = path.join(__dirname, 'public', 'pages');
 const IMAGES_DIR = path.join(__dirname, 'public', 'images');
-const ERROR_404 = path.join(__dirname, 'public', 'pages', '404.html');
 
 /**
  * START EXPRESS
@@ -21,23 +22,37 @@ const app = express();
 /**
  * CREATE MIDDLEWARE
  */
-morgan((tokens, req, res) => [
-    tokens.method(req, res),
-    tokens.url(req, res),
-    tokens.status(req, res),
-    tokens.res(req, res, 'content-length'), '-',
-    tokens['response-time'](req, res), 'ms',
-].join(' '));
-app.use(morgan('combined'));
+app.use(morgan('tiny'));
+app.set('view engine', 'ejs');
 
 /**
  * APP CONFIGURATION
  */
+app.use(
+    session({
+        secret: 'secret',
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            sameSite: 'none',
+            httpOnly: true,
+            secure: true,
+            maxAge: MAX_COOKIE_AGE,
+        },
+    }),
+);
+
+app.use(express.static(JS_DIR));
+app.use(express.static(PAGES_DIR));
+app.use(express.static(PUBLIC_DIR));
+app.use(express.static(IMAGES_DIR));
+app.use(express.static(STYLES_DIR));
 
 /**
  * ROUTES
  */
 const checkoutRoute = require('./routes/checkout');
+const errorRoute = require('./routes/error');
 
 /**
  * MIDDLEWARE FOR EXPRESS
@@ -45,16 +60,11 @@ const checkoutRoute = require('./routes/checkout');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+/**
+ * ROUTES MATCHERS
+ */
 app.use('/checkout', checkoutRoute);
-
-app.use(express.static(JS_DIR));
-app.use(express.static(PAGES_DIR));
-app.use(express.static(PUBLIC_DIR));
-app.use(express.static(IMAGES_DIR));
-app.use(express.static(STYLES_DIR));
-app.get('*', (req, res) => {
-    res.sendFile(ERROR_404);
-});
+app.use('*', errorRoute);
 
 /**
  * START SERVER

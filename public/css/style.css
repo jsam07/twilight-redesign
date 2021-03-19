@@ -1,5 +1,7 @@
 html, 
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;   
@@ -102,11 +104,11 @@ body {
 .checkout-button:hover {
     cursor: pointer;
     background-color: white;
-    color: #f61434;  
+    color:  #f61434;
 }
 
 /* Play Button Transitions */
-ion-icon {
+.hero-controls {
     opacity: 0.85;
     height: 8rem;
     width: 8rem;
@@ -114,7 +116,7 @@ ion-icon {
     transition: all 0.25s ease-in-out;
 }
 
-ion-icon:hover {
+.hero-controls:hover {
     cursor: pointer;
     opacity: 1;
     transform: scale(1.08);
@@ -127,6 +129,7 @@ ion-icon:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 
 /* Make Footer Sticky */
@@ -135,8 +138,14 @@ ion-icon:hover {
 }
 
 .tile {
+    
     padding: 2rem;
 }
+
+.tile.is-ancestor {
+    margin: 0;
+}
+
 
 .card {
     margin-bottom: 1.5rem;
@@ -166,8 +175,8 @@ ul {
 }
 
 iframe {
-    width: 100%;
-    height: 100%
+    width: 95%;
+    height: 95%
 }
 
 

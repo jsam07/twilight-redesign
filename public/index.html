@@ -4,12 +4,11 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A redesign and rebranding  of Twilight Drive-In's website">
       <title>Twilight Drive-In</title>
       <!-- STYLESHEETS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
       <link rel="stylesheet" href="bulmaStyles.css">
       <link rel="stylesheet" href="modal.css">
       <link rel="stylesheet" href="style.css">
@@ -30,7 +29,7 @@
          <header>
             <nav class="navbar has-centered-menu"  aria-label="Main Navigation">
                <div class="navbar-brand">
-                  <a class="navbar-item"  href="/" >
+                  <a class="navbar-item"  href="." >
                   <img src="/logo/logo.svg" width="112" height="28" alt="Twilight Logo">
                   </a>
                   <label class="navbar-burger burger" >
@@ -41,16 +40,16 @@
                </div>
                <div id="navbarBasicExample" class="navbar-menu">
                   <div class="navbar-start">
-                     <a class="navbar-item">
+                     <a class="navbar-item" href=".">
                      <strong>Home</strong>
                      </a>
                      <a class="navbar-item" href="#all-movies">
                      <strong>Movies</strong>
                      </a>
-                     <a class="navbar-item" id="admissions">
+                     <a class="navbar-item" id="admissions" href=".">
                      <strong>Admissions</strong>
                      </a>
-                     <a class="navbar-item" id="directions">
+                     <a class="navbar-item" id="directions" href=".">
                      <strong>Location</strong>
                      </a>
                   </div>
@@ -114,13 +113,13 @@
             <div class="hero is-halfheight" id="hero-poster">
                <div class="hero-body" id="hero-poster-container">
                   <div  class="play-trailer">
-                     <ion-icon id="play-button" title="trailer" src="/svg/misc/play-circle-outline.svg"></ion-icon>
+                     <ion-icon class="hero-controls" id="play-button" title="trailer" src="/svg/misc/play-circle-outline.svg"></ion-icon>
                   </div>
                   <div id="prev-hero-movie">
-                     <ion-icon id="prev-movie" name="chevron-back-outline"></ion-icon>
+                     <ion-icon class="hero-controls" id="prev-movie" name="chevron-back-outline"></ion-icon>
                   </div>
                   <div id="next-hero-movie">
-                     <ion-icon id="next-movie" name="chevron-forward-outline"></ion-icon>
+                     <ion-icon  class="hero-controls" id="next-movie" name="chevron-forward-outline"></ion-icon>
                   </div>
                   <div class="movie-actions-container" >
                      <div class="modal-container" id="hero-movie-modal-container">
@@ -130,9 +129,8 @@
                               <figure class="image is-16by9">
                                  <iframe id="yt-player" class="has-ratio yt-player-iframe" 
                                     allowfullscreen
-                                     
+                                    loading="lazy"
                                     src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
-                                    
                                      >
                                  </iframe>
                               </figure>
@@ -171,7 +169,7 @@
                </div>
               </div>
             <div class="hero is-fullheight">
-               <a id="all-movies"></a>
+               <a id="all-movies" href="."></a>
                <div class="tile is-ancestor">
                   <div class="tile is-4 is-vertical is-parent">
                      <div class="card">
@@ -215,9 +213,8 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
-                                              
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/XUN5EEDwHcI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
-                                             
                                               >
                                           </iframe>
                                        </figure>
@@ -269,6 +266,7 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/sfM7_JLk-84?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                                               >
                                           </iframe>
@@ -322,6 +320,7 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/1VIZ89FEjYI?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                                               >
                                           </iframe>
@@ -374,6 +373,7 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/1HZAnkxdYuA?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                                               >
                                           </iframe>
@@ -428,6 +428,7 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/xOsLIiBStEs?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                                               >
                                           </iframe>
@@ -480,6 +481,7 @@
                                        <figure class="image is-16by9">
                                           <iframe class="has-ratio yt-player-iframe" 
                                              allowfullscreen
+                                             loading="lazy"
                                              src="https://www.youtube.com/embed/ord7gP151vk?autoplay=0&mute=0&enablejsapi=1&modestbranding=1&vq=highres"
                                               >
                                           </iframe>
@@ -502,17 +504,17 @@
          </div>
          <div class="social-media">
             <span class="icon is-large">
-            <a href="/">
+            <a href="https://www.facebook.com/twilightdrivein/">
             <i class="fab fa-lg fa-facebook"></i>
             </a>
             </span>
             <span class="icon is-large">
-            <a href="/">
+            <a href="https://www.instagram.com/explore/locations/1711553552460929/canada/aldergrove-british-columbia/twilight-drive-in-theatre/">
             <i class="fab fa-lg fa-instagram"></i>
             </a>
             </span>
             <span class="icon is-large">
-            <a href="/">
+            <a href="https://ca.linkedin.com/">
             <i class="fab fa-lg fa-linkedin"></i>
             </a>
             </span>
