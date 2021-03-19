@@ -3,7 +3,7 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const router = express.Router();
 const PORT = process.env.PORT || 8080;
-const YOUR_DOMAIN = `http://localhost:${PORT}`;
+const YOUR_DOMAIN = 'https://twilight-redesign.herokuapp.com/';
 
 router.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
