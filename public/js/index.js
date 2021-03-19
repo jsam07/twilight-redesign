@@ -1,3 +1,5 @@
+// document.addEventListener('touchstart', onTouchStart, { passive: true });
+
 // Dynamically Set Hero Section Height
 function setHeroSectionHeight() {
     const viewportHeight = $(window).height();
