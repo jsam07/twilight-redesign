@@ -1,7 +1,6 @@
 const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 /**
  * CONSTANTS
@@ -34,6 +33,20 @@ app.use(morgan('combined'));
 /**
  * APP CONFIGURATION
  */
+
+/**
+ * ROUTES
+ */
+const checkoutRoute = require('./routes/checkout');
+
+/**
+ * MIDDLEWARE FOR EXPRESS
+ */
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/checkout', checkoutRoute);
+
 app.use(express.static(JS_DIR));
 app.use(express.static(PAGES_DIR));
 app.use(express.static(PUBLIC_DIR));
