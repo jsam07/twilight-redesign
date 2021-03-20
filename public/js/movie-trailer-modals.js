@@ -16,12 +16,15 @@ function resetTrailer() {
     $('iframe').attr('src', $('iframe').attr('src'));
 }
 
-function enableScrollingCloseModalAndStopVideo() {
-    enableScrolling();
+function enableScrollingCloseModalAndStopVideo(parentContainer) {
     $('.modal').removeClass('is-active');
     $('.yt-player-iframe').each(function () {
         this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
     });
+
+    const iframe = parentContainer.find('iframe');
+
+    if (iframe) iframe.remove();
 }
 
 function openModal(modalContainer) {
@@ -29,10 +32,26 @@ function openModal(modalContainer) {
     modal.addClass('is-active');
 }
 
+function findIframeAndOpenModal(modalContainer) {
+    const figureContainer = modalContainer.find('figure');
+    const iframeSRC = figureContainer.attr('data-src');
+    figureContainer.empty();
+    figureContainer.append(
+        `
+        <iframe class="has-ratio yt-player-iframe" 
+            allowfullscreen
+            src=${iframeSRC}
+            >
+        </iframe>
+        `,
+    );
+    openModal(modalContainer);
+}
+
 function openTrailerModal(button) {
     const buttonsContainer = button.parent();
     const modalContainer = buttonsContainer.next();
-    openModal(modalContainer);
+    findIframeAndOpenModal(modalContainer);
 }
 
 $(() => {
@@ -42,21 +61,23 @@ $(() => {
 
     $('#play-button').on('click', () => {
         const modalContainer = $('#hero-movie-modal-container');
-        openModal(modalContainer);
+        findIframeAndOpenModal(modalContainer);
     });
 
     $('.modal-close').on('click', () => {
-        enableScrollingCloseModalAndStopVideo();
+        const parentContainer = $(this).parent();
+        enableScrollingCloseModalAndStopVideo(parentContainer);
     });
 
     $('.modal-background').on('click', () => {
-        enableScrollingCloseModalAndStopVideo();
+        const parentContainer = $(this).parent();
+        enableScrollingCloseModalAndStopVideo(parentContainer);
     });
 
     $('#directions').on('click', function () {
         const navbarContainer = $(this).parent();
         const modalContainer = navbarContainer.next();
-        openModal(modalContainer);
+        findIframeAndOpenModal(modalContainer);
     });
 
     $('#admissions').on('click', () => {

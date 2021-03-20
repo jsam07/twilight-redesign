@@ -179,6 +179,14 @@ iframe {
     height: 95%
 }
 
+.footer {
+    padding : 1rem;
+}
+
+.modal-content{
+    width : 90vw;
+}
+
 
 #admissions-modal {
     width: 25%;
