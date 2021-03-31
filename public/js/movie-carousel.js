@@ -74,7 +74,7 @@ function setMovieSubtitle(subtitle) {
 }
 
 function setMovieTrailerURL(trailerURL) {
-    $('#yt-player').attr('src', trailerURL);
+    $('#hero-yt-player').attr('data-src', trailerURL);
 }
 
 function findCurrentMovieIndex() {
