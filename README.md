@@ -3,7 +3,7 @@
 A collaborative effort with three other full stack developers to propose a website redesign and rebranding for Twilight Drive-In theatre, in order to boost customer retention and conversion.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jsam07/twilight-redesign/main/assets/img/twilight.jpg" alt="Hero" height="600"/>
+    <img src="https://raw.githubusercontent.com/jsam07/twilight-redesign/main/assets/img/twilight.jpg" alt="Hero" height="80%"/>
 </p>
 
 
