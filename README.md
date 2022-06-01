@@ -1,6 +1,6 @@
 # Twilight Redesign
 
-A collaborative effort with three other full stack developers to propose a website redesign and rebranding for Twilight Drive-In theatre, in order to boost customer retention and conversion.
+A collaborative effort with three other full stack developers to propose a website redesign and rebranding for Twilight Drive-In theatre, in order to boost customer retention and conversion. See the updated [Figma](https://www.figma.com/file/nMNtdWDMYql7Kxp7qInSeg/MDIA-Redesign?node-id=0%3A1) for v2 of the redesign.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/jsam07/twilight-redesign/main/assets/img/twilight.jpg" alt="Hero" height="80%"/>
